@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | CAC Movies </title>
+
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header id="menu" class="d-flex flex-column text-center bg-red py-3 px-2">
+        <nav class="navbar navbar-expand-lg px-4">
+            <div class="container-fluid">
+
+                <div class="fw-bold">
+                    <i class="fa-solid fa-film fs-5 text-light"></i>
+                    <a class="navbar-brand text-light" href="./index.html">CAC-Movies</a>
+                </div>
+
+                <button class="navbar-toggler bg-light ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end pt-3 pt-sm-0" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-2">
+                            <a class="nav-link px-3 text-light fw-bold btn-nav" href="#tendencia">Tendencias</a>
+                        </li>
+                        <li class="nav-item px-2 py-2 py-sm-0">
+                            <a class="nav-link px-3 text-light fw-bold btn-nav" href="./pages/registrarse.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item mx-1 bg-def rounded">
+                            <a class="nav-link px-3 text-light fw-bold btn-login" href="./pages/login.html">Iniciar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="banner" class="d-flex justify-content-center align-items-center flex-column text-center"
+        style="padding: 0em 10vw;">
+        <div class="align-self-center">
+            <h1 class="fw-bold banner-titulo">Películas y series ilimitadas <br> en un solo lugar</h1>
+            <p class="banner-descripcion pt-3">
+                Disfruta donde quieras. <br>Cancela en cualquier momento.
+            </p>
+            <p class="pt-4">
+                <a href="./pages/registrarse.html">
+                    <button class="fw-bold fs-5 text-light btn-registrarse"> Registrate</button>
+                </a>
+            </p>
+            <p class="pt-4">
+            </p>
+        </div>
+    </main>
+
+
+    <main id="search"">
+        <section class=" form-busqueda">
+        <h2 class="text-light">¿Qué estas buscando para ver?</h2>
+        <form action="./html/resultado-busqueda.html" method="GET">
+            <input type="search" placeholder="Buscar...">
+            <button>Buscar</button>
+        </form>
+        </section>
+
+        <div class="box-linea">
+            <div class="linea"></div>
+        </div>
+
+        <section class="d-flex flex-column align-items-center pt-5 text-light">
+            <h2 id="tendencia">Las tendencias de hoy</h2>
+            <div class="container">
+
+                <!-- 1er Paginación -->
+                <div class="row d-flex justify-content-center">
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Kung Fu Panda 4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Godzilla x Kong: The New Empire</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/8QVDXDiOGHRcAD4oM6MXjE0osSj.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Alienoid</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/jFK2ZLQUzo9pea0jfMCHDfvWsx7.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">The Wages of Fear</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/a9ySX1sTxxZfiy6gUJlEbuYrfET.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Hard Hit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Road House</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/p1LbrdJ53dGfEhRopG71akfzOVu.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">After the Pandemic</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Madame Web</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Creation of the Gods I: Kingdom of Storms</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/ldfCF9RhR40mppkzmftxapaHeTo.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Migration</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/n726fdyL1dGwt15bY7Nj3XOXc4Q.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Heart of the Hunter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/lbOyeiiRYAE6Nm2e7xiNAAaRwZB.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Baghead</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/uoBHsxSgfc3PQsSn98RfnbePHOy.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">The Tearsmith</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/oPXzCV01ysDmnmpJOkiVqaZQ5QR.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">The Adventures of Maid Marian</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/9u6HEtZJdZDjPGGJq6YEuhPnoan.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Imaginary</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Dune</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/pqotEkHRbhUPUuX9Gq4U6aJzK55.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Jade</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">No Way Up</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="movies">
+                            <div class="movie">
+                                <img src="./src/Posters/sh7Rg8Er3tFcN9BpKIPOMvALgZd.jpg" alt="">
+                                <div class="movie-titulo">
+                                    <a href="">Civil War</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2do Paginación -->
+
+                <!-- 3er Paginación -->
+
+                <div class="w-100 d-flex justify-content-center gap-4 py-5">
+                    <a href="#" class="btn btn-lg  fw-bold border-white text-light btn-navegacion">
+                        <i class="fa-solid fa-chevron-left fs-6"></i>
+                        Anterior
+                    </a>
+                    <a href="#" class="btn btn-lg fw-bold border-white text-light btn-navegacion">
+                        Siguiente
+                        <i class="fa-solid fa-chevron-right fs-6"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="box-linea">
+            <div class="linea"></div>
+        </div>
+
+
+        <section class="d-flex flex-column align-items-center pt-5 text-light">
+            <h2>Las tendencias de hoy</h2>
+
+            <div class="w-75">
+                <div>
+                    <div id="slider" class="slider">
+                        <div class="slide">
+                            <img class="rounded" src="./src/Posters/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img class="rounded" src="./src/Posters/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img class="rounded" src="./src/Posters/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img class="rounded" src="./src/Posters/8QVDXDiOGHRcAD4oM6MXjE0osSj.jpg" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img class="rounded" src="./src/Posters/jFK2ZLQUzo9pea0jfMCHDfvWsx7.jpg" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img class="rounded" src="./src/Posters/a9ySX1sTxxZfiy6gUJlEbuYrfET.jpg" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img class="rounded" src="./src/Posters/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img class="rounded" src="./src/Posters/p1LbrdJ53dGfEhRopG71akfzOVu.jpg" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img class="rounded" src="./src/Posters/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-2 px-2 py-3">
+                    <a href="#" class="fw-bold fs-6">Términos y condiciones</a>
+                </div>
+                <div class="col-12 col-sm-2 px-2 py-3">
+                    <a href="#" class="fw-bold fs-6">Preguntas frecuentes</a>
+                </div>
+                <div class="col-12 col-sm-auto px-2 py-3">
+                    <a href="#" class="fw-bold fs-6">Ayuda</a>
+                </div>
+                <div class="col-12 col-sm-auto px-2 py-3">
+                    <a href="./pages/login.html" class="fw-bold fs-6 btn-login px-3 py-2">Administrador Peliculas</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ 
+    <a href="#menu" id="box-arrow-up">       
+        <i class="fa-solid fa-chevron-up" id="arrow-up" title="ir arriba"></i>
+    </a>        
+ 
+
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/181725805d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | CAC Movies</title>
+
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body class="bg-login">
+    <header id="menu" class="d-flex flex-column text-center py-3 px-2">
+        <nav class="navbar navbar-expand-lg px-4">
+            <div class="container-fluid">
+                <div class="fw-bold">
+                    <i class="fa-solid fa-film fs-5 text-light"></i>
+                    <a class="navbar-brand text-light" href="../index.html">CAC-Movies</a>
+                </div>
+               
+            </div>
+        </nav>
+    </header>
+
+    <main id="formulario-login-registro">
+        <form class="form form-registro">
+            <h1>Registro</h1>
+            <input type="text" name="name" id="name" placeholder="Nombre" required>
+            <input type="text" name="name" id="name" placeholder="Apellido" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Contraseña" required>
+            <input type="date" placeholder="dd/mm/aaaa">
+
+            <!-- <input type="text" name="country" id="country" placeholder="País"> -->
+            <select name="country" id="country">
+                <option value="Pais">País</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Peru">Perú</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Venezuela">Argentina</option>
+            </select>
+            
+            <button type="submit">Registrarse</button>
+            <p>
+                <a href="../index.html" class="text-light">Necesitas ayuda?</a>
+                <a href="./login.html">ir login</a>
+            </p>            
+        </form>
+        
+    </main>
+
+    <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/181725805d.js" crossorigin="anonymous"></script>
+</body>
+</html>

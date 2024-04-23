@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | CAC Movies </title>
 
+    <!-- ! Bootstrap 5 -->
     <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- ! AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- ! Stylesheet -->
     <link rel="stylesheet" href="./style.css">
+    
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
@@ -16,7 +23,7 @@
         <nav class="navbar navbar-expand-lg px-4">
             <div class="container-fluid">
 
-                <div class="fw-bold">
+                <div class="fw-bold an-logo">
                     <i class="fa-solid fa-film fs-5 text-light"></i>
                     <a class="navbar-brand text-light" href="./index.html">CAC-Movies</a>
                 </div>
@@ -33,10 +40,12 @@
                             <a class="nav-link px-3 text-light fw-bold btn-nav" href="#tendencia">Tendencias</a>
                         </li>
                         <li class="nav-item px-2 py-2 py-sm-0">
-                            <a class="nav-link px-3 text-light fw-bold btn-nav" href="./pages/registrarse.html">Registrarse</a>
+                            <a class="nav-link px-3 text-light fw-bold btn-nav"
+                                href="./pages/registrarse.html">Registrarse</a>
                         </li>
                         <li class="nav-item mx-1 bg-def rounded">
-                            <a class="nav-link px-3 text-light fw-bold btn-login" href="./pages/login.html">Iniciar Sesión</a>
+                            <a class="nav-link px-3 text-light fw-bold btn-login" href="./pages/login.html">Iniciar
+                                Sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -44,9 +53,8 @@
         </nav>
     </header>
 
-
-    <main id="banner" class="d-flex justify-content-center align-items-center flex-column text-center"
-        style="padding: 0em 10vw;">
+    <main id="banner"  class="d-flex justify-content-center align-items-center flex-column text-center"
+        style="padding: 0em 10vw;" data-aos="zoom-in" data-aos-duration="1000">
         <div class="align-self-center">
             <h1 class="fw-bold banner-titulo">Películas y series ilimitadas <br> en un solo lugar</h1>
             <p class="banner-descripcion pt-3">
@@ -64,7 +72,7 @@
 
 
     <main id="search"">
-        <section class=" form-busqueda">
+        <section class=" form-busqueda" data-aos="fade-up" data-aos-offset="300" data-aos-delay="50" data-aos-duration="1000">
         <h2 class="text-light">¿Qué estas buscando para ver?</h2>
         <form action="./html/resultado-busqueda.html" method="GET">
             <input type="search" placeholder="Buscar...">
@@ -74,16 +82,15 @@
 
         <div class="box-linea">
             <div class="linea"></div>
-        </div>
-
-        <section class="d-flex flex-column align-items-center pt-5 text-light">
+        </div>       
+        
+        <section class="d-flex flex-column align-items-center pt-5 text-light" data-aos="fade-up" data-aos-offset="400" data-aos-delay="100" data-aos-duration="1000">
             <h2 id="tendencia">Las tendencias de hoy</h2>
             <div class="container">
-
-                <!-- 1er Paginación -->
-                <div class="row d-flex justify-content-center">
+                 <!-- 1er Page -->
+                <div id="page-1" class="row d-flex justify-content-center">
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                        <a href="./pages/detalle.html">                       
+                        <a href="./pages/detalle.html">
                             <div class="movies">
                                 <div class="movie">
                                     <img src="./src/Posters/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="">
@@ -91,276 +98,795 @@
                                         <a href="./pages/detalle.html">Dune: Part Two</a>
                                     </div>
                                 </div>
-                            </div>                          
+                            </div>
                         </a>
                     </div>
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Kung Fu Panda 4</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Kung Fu Panda 4</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Godzilla x Kong: The New Empire</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Godzilla x Kong: The New Empire</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/8QVDXDiOGHRcAD4oM6MXjE0osSj.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Alienoid</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/8QVDXDiOGHRcAD4oM6MXjE0osSj.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Alienoid</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/jFK2ZLQUzo9pea0jfMCHDfvWsx7.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">The Wages of Fear</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/jFK2ZLQUzo9pea0jfMCHDfvWsx7.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">The Wages of Fear</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/a9ySX1sTxxZfiy6gUJlEbuYrfET.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Hard Hit</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/a9ySX1sTxxZfiy6gUJlEbuYrfET.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Hard Hit</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        </a>
-                    </div>
-
-                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                        <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Road House</a>
-                                </div>
-                            </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/p1LbrdJ53dGfEhRopG71akfzOVu.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">After the Pandemic</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Road House</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Madame Web</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/p1LbrdJ53dGfEhRopG71akfzOVu.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">After the Pandemic</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Creation of the Gods I: Kingdom of Storms</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Madame Web</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/ldfCF9RhR40mppkzmftxapaHeTo.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Migration</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Creation of the Gods I: Kingdom of Storms</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/n726fdyL1dGwt15bY7Nj3XOXc4Q.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Heart of the Hunter</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/ldfCF9RhR40mppkzmftxapaHeTo.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Migration</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/lbOyeiiRYAE6Nm2e7xiNAAaRwZB.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Baghead</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/n726fdyL1dGwt15bY7Nj3XOXc4Q.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Heart of the Hunter</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/uoBHsxSgfc3PQsSn98RfnbePHOy.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">The Tearsmith</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/lbOyeiiRYAE6Nm2e7xiNAAaRwZB.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Baghead</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/oPXzCV01ysDmnmpJOkiVqaZQ5QR.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">The Adventures of Maid Marian</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/uoBHsxSgfc3PQsSn98RfnbePHOy.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">The Tearsmith</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/9u6HEtZJdZDjPGGJq6YEuhPnoan.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Imaginary</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/oPXzCV01ysDmnmpJOkiVqaZQ5QR.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">The Adventures of Maid Marian</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Dune</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/9u6HEtZJdZDjPGGJq6YEuhPnoan.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Imaginary</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/pqotEkHRbhUPUuX9Gq4U6aJzK55.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Jade</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">No Way Up</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/pqotEkHRbhUPUuX9Gq4U6aJzK55.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Jade</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <a href="./pages/detalle.html">
-                        <div class="movies">
-                            <div class="movie">
-                                <img src="./src/Posters/sh7Rg8Er3tFcN9BpKIPOMvALgZd.jpg" alt="">
-                                <div class="movie-titulo">
-                                    <a href="./pages/detalle.html">Civil War</a>
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">No Way Up</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/sh7Rg8Er3tFcN9BpKIPOMvALgZd.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Civil War</a>
+                                    </div>
+                                </div>
+                            </div>
                         </a>
                     </div>
                 </div>
 
-                <!-- 2do Paginación -->
+                <!-- 2do Page -->
+                <div id="page-2" class="visually-hidden row d-flex justify-content-center">
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-                <!-- 3er Paginación -->
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/uoBHsxSgfc3PQsSn98RfnbePHOy.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-                <div class="w-100 d-flex justify-content-center gap-4 py-5">
-                    <a href="#tendencia" class="btn btn-lg  fw-bold border-white text-light btn-navegacion">
-                        <i class="fa-solid fa-chevron-left fs-6"></i>
-                        Anterior
-                    </a>
-                    <a href="#tendencia" class="btn btn-lg fw-bold border-white text-light btn-navegacion">
-                        Siguiente
-                        <i class="fa-solid fa-chevron-right fs-6"></i>
-                    </a>
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/h3jYanWMEJq6JJsCopy1h7cT2Hs.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/ui4DrH1cKk2vkHshcUcGt2lKxCm.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Baghead</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/rx0Sg4cK5gO6QKkyI0JAGT5tLJb.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/fAjyUDKABSehK6pHWvh9ket5X3z.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/n726fdyL1dGwt15bY7Nj3XOXc4Q.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/AgHbB9DCE9aE57zkHjSmseszh6e.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/6faYaQyiBPhqAizldJKq21mIVaE.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/lbOyeiiRYAE6Nm2e7xiNAAaRwZB.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/hil2ResSCwP95JweZVJsZ5CbZdc.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/fiVW06jE7z9YnO4trhaMEdclSiC.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/xeEw3eLeSFmJgXZzmF2Efww0q3s.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/qhb1qOilapbapxWQn9jtRCMwXJF.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/pqotEkHRbhUPUuX9Gq4U6aJzK55.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/9u6HEtZJdZDjPGGJq6YEuhPnoan.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/zaRzz2BxjxIVb7ja0gSedj1Hn1E.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3er Page -->
+                <div id="page-3" class="visually-hidden row d-flex justify-content-center">
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/1N7terrMeZPwK5qq31MUD0HQ3IG.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Kung Fu Panda 4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Godzilla x Kong: The New Empire</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/oPXzCV01ysDmnmpJOkiVqaZQ5QR.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Alienoid</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/wShcJSKMFg1Dy1yq7kEZuay6pLS.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">The Wages of Fear</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/5qHoazZiaLe7oFBok7XlUhg96f2.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Hard Hit</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Road House</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/vgJZSqKMXWDDx09iSIStGKfHMku.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">After the Pandemic</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Madame Web</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/87goLbbqrJqAxqDS5cBsik1zKT.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Creation of the Gods I: Kingdom of Storms</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Migration</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/A7EByudX0eOzlkQ2FIbogzyazm2.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Heart of the Hunter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Baghead</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/fAjyUDKABSehK6pHWvh9ket5X3z.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/kScdQEwS9jPEdnO23XjGAtaoRcT.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">The Tearsmith</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">The Adventures of Maid Marian</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/fSRb7vyIP8rQpL0I47P3qUsEKX3.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Imaginary</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune: Part Two</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Dune</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="./pages/detalle.html">
+                            <div class="movies">
+                                <div class="movie">
+                                    <img src="./src/Posters/3UKlVa1CBeQkRksHV5OfFTO52qd.jpg" alt="">
+                                    <div class="movie-titulo">
+                                        <a href="./pages/detalle.html">Jade</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>                                  
                 </div>
             </div>
-        </section>
+
+            <div class="w-100 d-flex justify-content-center gap-4 py-5">
+                <a class="btn btn-lg  fw-bold border-white text-light btn-navegacion"
+                    onclick="nextPage(0)">
+                    <i class="fa-solid fa-chevron-left fs-6"></i>
+                    Anterior
+                </a>
+                <a class="btn btn-lg fw-bold border-white text-light btn-navegacion"
+                    onclick="nextPage(1)">
+                    Siguiente
+                    <i class="fa-solid fa-chevron-right fs-6"></i>
+                </a>
+            </div>
+        </section>       
 
         <div class="box-linea">
             <div class="linea"></div>
         </div>
 
 
-        <section class="d-flex flex-column align-items-center pt-5 text-light">
+        <section class="d-flex flex-column align-items-center pt-5 text-light" data-aos="fade-up" data-aos-offset="400" data-aos-delay="100" data-aos-duration="1000">
             <h2>Las tendencias de hoy</h2>
 
             <div class="w-75">
@@ -427,14 +953,22 @@
         </div>
     </footer>
 
- 
-    <a href="#menu" id="box-arrow-up">       
-        <i class="fa-solid fa-chevron-up" id="arrow-up" title="ir arriba"></i>
-    </a>        
- 
 
+    <a href="#menu" id="box-arrow-up">
+        <i class="fa-solid fa-chevron-up" id="arrow-up" title="ir arriba"></i>
+    </a>
+
+    <!--  ! Bootstrap 5  -->
     <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- ! FontAwesome -->
     <script src="https://kit.fontawesome.com/181725805d.js" crossorigin="anonymous"></script>
+    <!-- ! AOS Animation-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- ! My JS -->
+    <script src="./main.js"></script>
 </body>
 
 </html>

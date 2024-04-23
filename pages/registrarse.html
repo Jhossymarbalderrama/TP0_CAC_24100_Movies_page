@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro | CAC Movies</title>
 
+    <!-- ! Bootstrap 5 -->
     <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- ! AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- ! Stylesheet -->
     <link rel="stylesheet" href="../style.css">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body class="bg-login">
     <header id="menu" class="d-flex flex-column text-center py-3 px-2">
         <nav class="navbar navbar-expand-lg px-4">
             <div class="container-fluid">
-                <div class="fw-bold">
+                <div class="fw-bold an-logo">
                     <i class="fa-solid fa-film fs-5 text-light"></i>
                     <a class="navbar-brand text-light" href="../index.html">CAC-Movies</a>
                 </div>
@@ -22,7 +29,7 @@
         </nav>
     </header>
 
-    <main id="formulario-login-registro" class="centrado">
+    <main id="formulario-login-registro" class="centrado" data-aos="zoom-in" data-aos-duration="1000">
         <form class="form form-registro">
             <h1 class="titulo-formulario">Registro</h1>
             <input type="text" class="input-formulario" name="name" id="name" placeholder="Nombre" required>
@@ -43,6 +50,10 @@
                 <option value="Uruguay">Uruguay</option>
                 <option value="Venezuela">Venezuela</option>
             </select>
+            <div class="terminos text-start">
+                <input class="check" type="checkbox" id="terminos">
+                <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
+            </div>
             <button type="submit" class="boton-formulario">Registrarse</button>
             <p class="enlaces">
                 <a href="../index.html" class="enlace-ayuda">Necesitas ayuda?</a>
@@ -52,7 +63,16 @@
     </main>
     
 
+    <!--  ! Bootstrap 5  -->
     <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- ! FontAwesome -->
     <script src="https://kit.fontawesome.com/181725805d.js" crossorigin="anonymous"></script>
+    <!-- ! AOS Animation-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- ! My JS -->
+    <script src="../main.js"></script>
 </body>
 </html>

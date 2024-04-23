@@ -22,17 +22,15 @@
         </nav>
     </header>
 
-    <main id="formulario-login-registro">
+    <main id="formulario-login-registro" class="centrado">
         <form class="form form-registro">
-            <h1>Registro</h1>
-            <input type="text" name="name" id="name" placeholder="Nombre" required>
-            <input type="text" name="name" id="name" placeholder="Apellido" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Contraseña" required>
-            <input type="date" placeholder="dd/mm/aaaa">
-
-            <!-- <input type="text" name="country" id="country" placeholder="País"> -->
-            <select name="country" id="country">
+            <h1 class="titulo-formulario">Registro</h1>
+            <input type="text" class="input-formulario" name="name" id="name" placeholder="Nombre" required>
+            <input type="text" class="input-formulario" name="lastname" id="lastname" placeholder="Apellido" required>
+            <input type="email" class="input-formulario" placeholder="Email" required>
+            <input type="password" class="input-formulario" placeholder="Contraseña" required>
+            <input type="date" class="input-date input-formulario" placeholder="dd/mm/aaaa">
+            <select class="input-formulario" name="country" id="country">
                 <option value="Pais">País</option>
                 <option value="Argentina">Argentina</option>
                 <option value="Bolivia">Bolivia</option>
@@ -43,17 +41,16 @@
                 <option value="Paraguay">Paraguay</option>
                 <option value="Peru">Perú</option>
                 <option value="Uruguay">Uruguay</option>
-                <option value="Venezuela">Argentina</option>
+                <option value="Venezuela">Venezuela</option>
             </select>
-            
-            <button type="submit">Registrarse</button>
-            <p>
-                <a href="../index.html" class="text-light">Necesitas ayuda?</a>
-                <a href="./login.html">ir login</a>
-            </p>            
-        </form>
-        
+            <button type="submit" class="boton-formulario">Registrarse</button>
+            <p class="enlaces">
+                <a href="../index.html" class="enlace-ayuda">Necesitas ayuda?</a>
+                <a href="./login.html" class="enlace-login">Ir a iniciar sesión</a>
+            </p>
+        </form>        
     </main>
+    
 
     <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/181725805d.js" crossorigin="anonymous"></script>

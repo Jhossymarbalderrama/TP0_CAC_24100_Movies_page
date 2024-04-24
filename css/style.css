@@ -125,7 +125,7 @@ body{
 
 /* ? Banner Principal */
 #banner {
-    background-image: linear-gradient(to top, #000000cb, #00000065), url('./src/Background/banner-bg.jpg');
+    background-image: linear-gradient(to top, #000000cb, #00000065), url('../src/Background/banner-bg.jpg');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -340,7 +340,7 @@ a {
 /* ? Login && Registro */
 
 .bg-login {
-    background-image: linear-gradient(to top, #00000060, #00000052), url('./src/Background/bg.jpg');
+    background-image: linear-gradient(to top, #00000060, #00000052), url('../src/Background/bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -436,7 +436,7 @@ padding: 1.1rem 1rem;
 
 /* ? Banner Movie Detalle */
 #banner-detalle {
-    background-image: linear-gradient(to top, #030303, #03030331), url('./src/movie-detalle/mario-bg.jpg');
+    background-image: linear-gradient(to top, #030303, #03030331), url('../src/movie-detalle/mario-bg.jpg');
     background-repeat: no-repeat;
     background-position: 50% 25%;
     background-size: cover;

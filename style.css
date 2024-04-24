@@ -135,18 +135,20 @@ body{
 }
 
 .banner-titulo {
-    /* font-size: 5.5vh; */
-    font-size: 2.4rem;
+    font-size: 7vh;
 }
 
 .banner-descripcion {
-    /* font-size: 3vh; */
-    font-size: 1.5rem;
+    font-size: 3.5vh;
 }
 
 /* ? Seccion de formulario Busqueda */
 #search {
     background: var(--bg-color-def);
+}
+
+.search-titulo{
+    font-size: 5vh !important;   
 }
 
 .form-busqueda {
@@ -251,14 +253,15 @@ body{
     display: none;
     position: absolute;
     top: 30%;
-    text-align: center;
+    text-align: center;    
 }
+
 
 .movie-titulo a {
     text-decoration: none;
     color: var(--text-color-light);
     font-weight: bold;
-    font-size: 3vh;
+    font-size: 2.2vh;
     text-shadow: 2px 2px black;
 }
 
@@ -305,6 +308,10 @@ footer {
 a {
     text-decoration: none;
     color: var(--text-color-light);
+}
+
+.tendencia-titulo{
+    font-size: 3vh !important;   
 }
 
 /* ? Boton To Up */
@@ -510,6 +517,26 @@ padding: 1.1rem 1rem;
         width: 100%;
         height: 20rem;
     }
+
+    .banner-titulo {
+        font-size: 4.5vh;
+    }
+    
+    .banner-descripcion {
+        font-size: 2.5vh;
+    }
+    
+    .search-titulo{
+     font-size: 2.5vh !important;   
+    }
+
+    .movie-titulo a {
+        font-size: 3.5vh;
+    }
+
+    .tendencia-titulo{
+        font-size: 3vh !important;   
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -528,6 +555,26 @@ padding: 1.1rem 1rem;
 
     #banner-detalle .row {
         margin: -5vh 0 0 0;
+    }
+
+    .banner-titulo {
+        font-size: 6vh;
+    }
+    
+    .banner-descripcion {
+        font-size: 3vh;
+    }
+
+    .search-titulo{
+        font-size: 3.5vh !important;   
+    }
+
+    .movie-titulo a {
+        font-size: 2.5vh;
+    }
+
+    .tendencia-titulo{
+        font-size: 2.5vh !important;   
     }
 }
 

@@ -205,6 +205,9 @@ body{
 }
 
 /* ?  Collection Movies */
+
+
+
 .movies {
     display: flex;
     justify-content: center;
@@ -435,14 +438,14 @@ padding: 1.1rem 1rem;
 /* ! Pantalla Detalle Movie */
 
 /* ? Banner Movie Detalle */
-#banner-detalle {
-    background-image: linear-gradient(to top, #030303, #03030331), url('../src/movie-detalle/mario-bg.jpg');
+#banner-detalle {    
     background-repeat: no-repeat;
-    background-position: 50% 25%;
-    background-size: cover;
+    background-position: center center; /* Mejora el centrado */
+    background-size: cover; /* Ajusta el tamaño */
     height: 70vh;
     text-align: center;
     color: white;
+    transition: background-image 0.5s ease-in-out;
 }
 
 #banner-detalle .row {

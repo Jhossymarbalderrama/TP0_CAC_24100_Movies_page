@@ -34,9 +34,14 @@
     <main id="formulario-login-registro" class="box-form" data-aos="zoom-in" data-aos-duration="1000">
         <form class="form form-login">
             <h1 class="titulo-formulario">Iniciar Sesión</h1>
-            <input type="email" class="input-formulario" placeholder="Email" required>
-            <input type="password" class="input-formulario" placeholder="Contraseña" required>
-            <button type="submit" class="boton-formulario">Iniciar Sesión</button>
+
+            <input type="email" id="email" class="input-formulario" placeholder="Email" required>
+            <span id="validation-email" class="px-3 text-danger visually-hidden w-full d-flex flex-column align-items-start">*Campo requerido</span>
+
+            <input type="password" id="password" class="input-formulario" placeholder="Contraseña" required>
+            <span id="validation-password" class="px-3 text-danger visually-hidden w-full d-flex flex-column align-items-start">*Campo requerido</span>
+
+            <button type="submit" class="boton-formulario" onclick="validation()">Iniciar Sesión</button>
             <p class="enlace-registro">
                 <a href="./registrarse.html">Registrarse</a>
             </p>

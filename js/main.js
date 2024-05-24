@@ -366,7 +366,7 @@ if (JSON.parse(localStorage.getItem("users")) != null) {
         console.log(info);
         form.reset();
           
-        window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + 'TP0_CAC_24100_Movies_page/index.html');
+        window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/TP0_CAC_24100_Movies_page/index.html');
       } else {
         let info = `Usuario no encontrado. 😢`;
         alert(info);
@@ -429,7 +429,7 @@ if (JSON.parse(localStorage.getItem("users")) != null) {
       console.log(users);
   
       formRegister.reset();          
-      window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + 'TP0_CAC_24100_Movies_page/pages/login.html');  
+      window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/TP0_CAC_24100_Movies_page/pages/login.html');  
     }else{
       if (!email) {
         elementEmailValueR.classList.remove("visually-hidden");

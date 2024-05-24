@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
 
     <!-- ! Bootstrap 5 -->
     <!-- <link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.min.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 
     <!-- ! AOS Animation -->
@@ -18,6 +20,7 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body class="bg-login">
     <header id="menu" class="d-flex flex-column text-center py-3 px-2">
         <nav class="navbar navbar-expand-lg px-4">
@@ -26,18 +29,24 @@
                     <i class="fa-solid fa-film fs-5 text-light"></i>
                     <a class="navbar-brand text-light" href="../index.html">CAC-Movies</a>
                 </div>
-               
+
             </div>
         </nav>
     </header>
 
     <main id="formulario-login-registro" class="box-form" data-aos="zoom-in" data-aos-duration="1000">
-        <form class="form form-registro pt-5 pb-3">
+        <form id="register-form" class="form form-registro pt-5 pb-3">
             <h1 class="titulo-formulario">Registro</h1>
-            <input type="text" class="input-formulario" name="name" id="name" placeholder="Nombre" required>
-            <input type="text" class="input-formulario" name="lastname" id="lastname" placeholder="Apellido" required>
-            <input type="email" class="input-formulario" placeholder="Email" required>
-            <input type="password" class="input-formulario" placeholder="Contraseña" required>
+            <input type="text" class="input-formulario" name="name" id="name" placeholder="Nombre">
+            <input type="text" class="input-formulario" name="lastname" id="lastname" placeholder="Apellido">
+            
+            <input id="emailRegistro" type="email" class="input-formulario" placeholder="Email">
+            <span id="validation-email-r" class="px-3 text-danger visually-hidden w-full d-flex flex-column align-items-start">*Campo requerido</span>
+
+
+            <input id="passwordRegistro" type="password" class="input-formulario" placeholder="Contraseña">
+            <span id="validation-password-r" class="px-3 text-danger visually-hidden w-full d-flex flex-column align-items-start">*Campo requerido</span>
+
             <input type="date" class="input-date input-formulario" placeholder="dd/mm/aaaa">
             <select class="input-formulario" name="country" id="country">
                 <option value="Pais">País</option>
@@ -56,27 +65,30 @@
                 <input class="check" type="checkbox" id="terminos">
                 <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
             </div>
-            <button type="submit" class="boton-formulario">Registrarse</button>
+            <button type="submit" class="boton-formulario" onclick="registerse()">Registrarse</button>
             <p class="enlaces">
                 <a href="../index.html" class="enlace-ayuda">Necesitas ayuda?</a>
                 <a href="./login.html" class="enlace-login">Ir a iniciar sesión</a>
             </p>
-        </form>        
+        </form>
     </main>
-    
+
 
     <!--  ! Bootstrap 5  -->
     <!-- <script src="../css/bootstrap/dist/js/bootstrap.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
     <!-- ! FontAwesome -->
     <script src="https://kit.fontawesome.com/181725805d.js" crossorigin="anonymous"></script>
     <!-- ! AOS Animation-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
     <!-- ! My JS -->
     <script src="../js/main.js"></script>
 </body>
+
 </html>

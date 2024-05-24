@@ -16,7 +16,7 @@
     <!-- ! Stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body class="bg-login">
     <header id="menu" class="d-flex flex-column text-center py-3 px-2">
@@ -32,7 +32,7 @@
     </header>
     
     <main id="formulario-login-registro" class="box-form" data-aos="zoom-in" data-aos-duration="1000">
-        <form class="form form-login">
+        <form id="login-form" class="form form-login">
             <h1 class="titulo-formulario">Iniciar Sesión</h1>
 
             <input type="email" id="email" class="input-formulario" placeholder="Email" required>
@@ -42,6 +42,11 @@
             <span id="validation-password" class="px-3 text-danger visually-hidden w-full d-flex flex-column align-items-start">*Campo requerido</span>
 
             <button type="submit" class="boton-formulario" onclick="validation()">Iniciar Sesión</button>
+            
+           <div onclick=loadInvitado()>
+            <input type="checkbox" id="invitado"> <label for="invitado">Logearse como invitado</label>
+           </div>
+
             <p class="enlace-registro">
                 <a href="./registrarse.html">Registrarse</a>
             </p>

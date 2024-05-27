@@ -41,6 +41,10 @@ if (JSON.parse(localStorage.getItem("users")) != null) {
       .then((res) => res.json())
       .then((res) => {
         resMoviesApi = res.results;
+
+        console.log(
+          "Response: API TheMovieDB https://www.themoviedb.org/",
+          res);
       })
       .catch((err) => console.error(err));
 

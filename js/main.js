@@ -94,13 +94,13 @@ if (JSON.parse(localStorage.getItem("users")) != null) {
   function constructorMovie(movie) {
     return `
             <div class="p-5 p-sm-2 p-xl-3 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-              <a href='./pages/detalle.html' onclick="saveMovie(${movie.id})">
+              <a href='./pages/detalle/detalle.html' onclick="saveMovie(${movie.id})">
                 <div class="movies">
                   <div class="movie">
                     <img src="${urlImgAPI + movie.poster_path}" alt="">
 
                     <div class="movie-titulo">
-                      <a href='../pages/detalle/detalle.html' onclick="saveMovie(${
+                      <a href='./pages/detalle/detalle.html' onclick="saveMovie(${
                         movie.id
                       })">${movie.title}</a>
                     </div>
@@ -370,8 +370,8 @@ if (JSON.parse(localStorage.getItem("users")) != null) {
         console.log(info);
         form.reset();
           
-        // window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/TP0_CAC_24100_Movies_page/index.html');
-        window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/pages/admin/admin.html');
+        window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/TP0_CAC_24100_Movies_page/pages/admin/admin.html');
+        // window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/pages/admin/admin.html');
       } else {
         let info = `Usuario no encontrado. 😢`;
         alert(info);

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --text-color-dark: #2b2b2b;
+    --text-color-light: #ffffff;
+
+    --bg-color-red: #e9405c;
+    --bg-color-def: #181419;
+    --bg-color-form: #2A2A2A;
+
+    --box-shadow-dark: #2c2c2c;
+    --box-shadow-light: #ffffff;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to top, #bebebe ,#c4c4c4, #c9c9c9, #c4c4c4, #bebebe);   
+}
+
+main{
+    width: 100%;    
+}
+
+.row{
+    width: 100%;
+}
+
+.off-canvas{
+    color: white;
+    background: linear-gradient(to top, #2c2c2c ,#313131, #363636, #313131, #2c2c2c);
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2.8rem;
+}
+
+.body-admin{
+    /* background: linear-gradient(to top, #bebebe ,#c4c4c4, #c9c9c9, #c4c4c4, #bebebe);    */
+}
+
+.canvas-header{
+    height: 5%;
+}
+
+.canvas-body{
+    margin: 3rem 0rem;    
+    height: 90%;
+}
+
+.canvas-footer{
+    height: 5%;
+}
+
+.canvas-header .logo-text{
+    font-size: 2.5vh;
+    font-weight: bolder;
+    margin-left: 5px;   
+}
+
+.canvas-header .logo-icon{
+    font-size: 3.5vh;       
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+ul > li {    
+    list-style: none;
+    padding: 0.1rem 0rem;
+}
+
+li > a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--bg-color-red);
+}
+
+li > i {
+    
+    width: 25px;
+}
+
+
+a{
+    cursor: pointer;
+    color: white !important;
+}
+
+li > a:hover{
+    color: var(--bg-color-red) !important;
+}
+
+/* ? Logo */
+.an-logo:hover{
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+
+.select-nav{
+    color: var(--bg-color-red) !important;
+    font-weight: bolder;
+    text-decoration: none;    
+}
+
+tr > th {
+    text-transform: uppercase;    
+}
+
+td > i {
+    cursor: pointer;
+}
+
+
+td i:hover{
+    transform: scale(1.4);
+    transition: 0.3s all ease;
+}
+
+.hidden{
+    display: none;
+}

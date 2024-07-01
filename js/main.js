@@ -100,7 +100,7 @@ if (JSON.parse(localStorage.getItem("users")) != null) {
                     <img src="${urlImgAPI + movie.poster_path}" alt="">
 
                     <div class="movie-titulo">
-                      <a href='./pages/detalle.html' onclick="saveMovie(${
+                      <a href='../pages/detalle/detalle.html' onclick="saveMovie(${
                         movie.id
                       })">${movie.title}</a>
                     </div>
@@ -370,7 +370,8 @@ if (JSON.parse(localStorage.getItem("users")) != null) {
         console.log(info);
         form.reset();
           
-        window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/TP0_CAC_24100_Movies_page/index.html');
+        // window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/TP0_CAC_24100_Movies_page/index.html');
+        window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/pages/admin/admin.html');
       } else {
         let info = `Usuario no encontrado. 😢`;
         alert(info);

@@ -370,8 +370,8 @@ if (JSON.parse(localStorage.getItem("users")) != null) {
         console.log(info);
         form.reset();
           
-        window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/TP0_CAC_24100_Movies_page/pages/admin/admin.html');
-        // window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/pages/admin/admin.html');
+        // window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/TP0_CAC_24100_Movies_page/pages/admin/admin.html');
+        window.location.replace(window.location.href.split('/').slice(0, 3).join('/') + '/pages/admin/admin.html');
       } else {
         let info = `Usuario no encontrado. 😢`;
         alert(info);

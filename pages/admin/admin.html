@@ -71,30 +71,155 @@
             <!-- Body Admin -->
             <div class="body-admin col-10 px-4 py-4">
 
+                <!-- Content Movie Admin -->
                 <div id="adminMovie" class="hidden">
                     <h3 style="font-weight: bold;">Administrador de Movie</h3>
                     <hr class="border border-danger border-3 opacity-50">
                     <div class="d-flex flex-col gap-3 my-2 justify-content-end">
-                        <button type="button" class="btn btn-success px-4">
-                            <i class="fa-solid fa-plus"></i>
-                            Crear Movie
+                        <button type="button" class="btn btn-success px-4" onclick="abrirModal(1)">
+                            <i class="fa-solid fa-plus"></i> Crear Movie
                         </button>
                     </div>
 
-                    <div id="tableMovies" class="bd-example">                                                                                          
+                    <div id="tableMovies" class="bd-example">
+                    </div>
+
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1"
+                        aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header text-white" id="headerModal">
+                                    <h1 class="modal-title fs-5" id="exampleModalCenterTitle"></h1>
+                                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="container mt-1">
+                                        <h2>Formulario de Movie</h2>
+                                        <form id="formMovie" class="form">
+                                            <!-- bg-dark-subtle como solo vista -->
+                                            <div class="row mb-3">
+                                                <div class="col-md-4">
+                                                    <label for="title" class="form-label">Título</label>
+                                                    <input type="text" class="form-control bg-body-secondary" id="title"
+                                                        placeholder="Ingrese titulo">
+                                                    <span id="spanTitle" class="text-danger d-none">*Ingrese
+                                                        titulo</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="release_date" class="form-label">Fecha de
+                                                        Estreno</label>
+                                                    <input type="date" class="form-control bg-body-secondary"
+                                                        id="release_date">
+                                                    <span id="spanRelea" class="text-danger d-none">*Ingrese
+                                                        fecha</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="runtime" class="form-label">Duración (minutos)</label>
+                                                    <input type="number" class="form-control bg-body-secondary"
+                                                        id="runtime" placeholder="Ingrese duración">
+                                                    <span id="spanRunti" class="text-danger d-none">*Ingrese
+                                                        duración</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <label for="poster" class="form-label">URL del Póster</label>
+                                                    <input type="text" class="form-control bg-body-secondary"
+                                                        id="poster" placeholder="https://example.com/poster.jpg">
+                                                    <span id="spanPoste" class="text-danger d-none">*Ingrese
+                                                        póster</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="backdrop" class="form-label">URL del Backdrop</label>
+                                                    <input type="text" class="form-control bg-body-secondary"
+                                                        id="backdrop" placeholder="https://example.com/backdrop.jpg">
+                                                    <span id="spanBackd" class="text-danger d-none">*Ingrese
+                                                        backdrop</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-md-3">
+                                                    <label for="status" class="form-label">Estado</label>
+                                                    <input type="text" class="form-control bg-body-secondary"
+                                                        id="status" placeholder="Ingrese estado">
+                                                    <span id="spanStatu" class="text-danger d-none">*Ingrese
+                                                        estado</span>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="budget" class="form-label">Presupuesto</label>
+                                                    <input type="number" class="form-control bg-body-secondary"
+                                                        id="budget" placeholder="Ingrese presupuesto">
+                                                    <span id="spanBudge" class="text-danger d-none">*Ingrese
+                                                        presupuesto</span>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="revenue" class="form-label">Ingresos</label>
+                                                    <input type="number" class="form-control bg-body-secondary"
+                                                        id="revenue" placeholder="Ingrese ingresos" value="0">
+                                                    <span id="spanReven" class="text-danger d-none">*Ingrese
+                                                        ingresos</span>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="language" class="form-label">Idioma</label>
+                                                    <input type="text" class="form-control bg-body-secondary"
+                                                        id="language" placeholder="Ingrese idioma">
+                                                    <span id="spanLangu" class="text-danger d-none">*Ingrese
+                                                        idioma</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="overview" class="form-label">Descripción</label>
+                                                <textarea class="form-control bg-body-secondary" id="overview" rows="3"
+                                                    placeholder="Ingrese reseña"></textarea>
+                                                <span id="spanOverv" class="text-danger d-none">*Ingrese
+                                                    descripcion</span>
+                                            </div>
+                                        </form>
+
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" id="btnAdd" class="btn btn-success px-4"
+                                                onclick="addMovie()">
+                                                <i class="fa-solid fa-plus"></i>
+                                                Agregar Movie
+                                            </button>
+
+                                            <button type="submit" id="btnUpdate" class="btn btn-warning px-4 d-none"
+                                            onclick="updateMovie()">
+                                                <i class="fa-solid fa-file-pen"></i>
+                                                Modificar Movie
+                                            </button>
+
+                                            <button type="submit" id="btnDelete" class="btn btn-danger px-4 d-none"
+                                            onclick="deleteMovie()">
+                                                <i class="fa-solid fa-trash"></i>
+                                                Eliminar Movie
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Content User Admin -->
                 <div id="adminUser" class="hidden">
                     <h3 style="font-weight: bold;">Administrador de Usuarios</h3>
                     <hr class="border border-danger border-3 opacity-50">
                 </div>
 
+                <!-- Content Language Admin -->
                 <div id="adminLanguage" class="hidden">
                     <h3 style="font-weight: bold;">Administrador de Lenguajes</h3>
                     <hr class="border border-danger border-3 opacity-50">
                 </div>
 
+                <!-- Content Country Admin -->
                 <div id="adminCountry" class="hidden">
                     <h3 style="font-weight: bold;">Administrador de Paises</h3>
                     <hr class="border border-danger border-3 opacity-50">

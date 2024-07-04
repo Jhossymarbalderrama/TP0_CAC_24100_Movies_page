@@ -1,6 +1,6 @@
 # 🎬 TP CAC 24100 Frontend (Javascript - Html5 - Css) | Movies 🎞️
 <p>Web para movies</p>
-<p>📌 Demo: <a href='https://jhossymarbalderrama.github.io/TP0_CAC_24100_Movies_page/index.html' target='_blank'>↗️ Web TP Movie 👈<a/></p>
+<p>📌 Demo: <a href='https://jhossymarbalderrama.github.io/TP0_CAC_24100_Movies_page_frontend/index.html' target='_blank'>↗️ Web TP Movie 👈<a/></p>
 <p>📌 Repositorio Backend: <a href='https://github.com/Jhossymarbalderrama/TP0_CAC_24100_Movies_page_backend' target='_blank'>↗️ Go Repository 👈<a/></p>
 
 # 💻 Navegación de páginas

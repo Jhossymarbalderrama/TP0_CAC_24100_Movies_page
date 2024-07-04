@@ -96,7 +96,9 @@ async function drawTableMovies() {
   docTable.innerHTML = "";
   docTable.innerHTML +=
     `
-     <table class="table table-auto">
+    <div class="table-responsive">
+     <table class="table table-auto table-hover ">
+      <caption>Lista de Movies</caption>
         <thead class="table-dark">
             <tr>
                 <th scope="col">#</th>
@@ -109,7 +111,7 @@ async function drawTableMovies() {
                 <th scope="col">budget</th>
                 <th scope="col">revenue</th>
                 <th scope="col">language</th>
-                <th scope="col" class='d-flex align-items-center justify-content-center' style='height: 6vh;'>
+                <th scope="col" class='d-flex align-items-center justify-content-center' style='height: 2.5rem;'>
                     <div onclick="drawTableMovies()">
                     <i class="fa-solid fa-rotate-right text-info"></i>
                     </div>
@@ -121,16 +123,18 @@ async function drawTableMovies() {
     `          
         </tbody>
     </table>
+    </div>
     `;
 }
 
 async function getMovieApiBackend() {
-  let resMovies = "";
+  let resMovies = [];
 
   await fetch(`http://localhost:8080/webapp/findAllMovies`)
     .then((res) => res.json())
     .then((res) => {
       resMovies = res;
+      resMovies.reverse();
       console.log(res);
     })
     .catch((err) => console.error(err));
@@ -301,8 +305,7 @@ function altaMovieAPI(movie) {
   );
 }
 
-
-function updateMovieAPI(movie){  
+function updateMovieAPI(movie) {
   const requestOptions = {
     method: "PUT",
     headers: {
@@ -316,20 +319,20 @@ function updateMovieAPI(movie){
   );
 }
 
-function deleteMovieAPI(idMovie){
+function deleteMovieAPI(idMovie) {
   const requestOptions = {
     method: "DELETE",
   };
 
-  fetch("http://localhost:8080/webapp/deleteMovie?id="+idMovie, requestOptions).catch(
-    (err) => console.error("Error en la solicitud:", err)
-  );
+  fetch(
+    "http://localhost:8080/webapp/deleteMovie?id=" + idMovie,
+    requestOptions
+  ).catch((err) => console.error("Error en la solicitud:", err));
 }
-
 
 function selectMovieUpdate(idMovie) {
   localStorage.setItem("idMovieUpdate", idMovie);
-  setFormValuesByID(idMovie);  
+  setFormValuesByID(idMovie);
   abrirModal(2);
 }
 
@@ -406,6 +409,7 @@ function transformDate(date) {
 function abrirModal(idTitle) {
   sacarBgHeaderModal();
   readOnlyForm(false);
+  resetSpanForm();
   let formMovie = document.getElementById("formMovie");
   let formTitle = document.getElementById("exampleModalCenterTitle");
   let btnAdd = document.getElementById("btnAdd");
@@ -479,6 +483,7 @@ function deleteMovie() {
 }
 
 function crudMovie(action) {
+  let formValid = false;
   if (action == "create" || action == "update") {
     let formGroup = {
       title: document.getElementById("title").value,
@@ -495,7 +500,8 @@ function crudMovie(action) {
       language: document.getElementById("language").value,
     };
 
-    if (validarFormData(formGroup)) {
+    formValid = validarFormData(formGroup);
+    if (formValid) {
       switch (action) {
         case "create":
           altaMovieAPI(formGroup);
@@ -509,14 +515,29 @@ function crudMovie(action) {
   } else {
     if (action == "delete") {
       deleteMovieAPI(localStorage.getItem("idMovieDelete"));
+      formValid = true;
     }
   }
 
-  setTimeout(() => {
-    drawTableMovies();
-    cerrarModal();
-  }, 1000);
+  if (formValid) {
+    setTimeout(() => {
+      drawTableMovies();
+      cerrarModal();
+    }, 1000);
+  }
 }
 
+function resetSpanForm() {
+  document.getElementById("spanTitle").classList.add("d-none");
+  document.getElementById("spanRelea").classList.add("d-none");
+  document.getElementById("spanRunti").classList.add("d-none");
+  document.getElementById("spanPoste").classList.add("d-none");
+  document.getElementById("spanBackd").classList.add("d-none");
+  document.getElementById("spanStatu").classList.add("d-none");
+  document.getElementById("spanBudge").classList.add("d-none");
+  document.getElementById("spanReven").classList.add("d-none");
+  document.getElementById("spanLangu").classList.add("d-none");
+  document.getElementById("spanOverv").classList.add("d-none");
+}
 
 navbar();

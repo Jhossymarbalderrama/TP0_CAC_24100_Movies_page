@@ -82,13 +82,15 @@ tr{
 }
 
 .canvas-header .logo-text{
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
+    font-size: 1.4rem;
     font-weight: bolder;
     margin-left: 5px;   
 }
 
 .canvas-header .logo-icon{
-    font-size: 3.5vh;       
+    /* font-size: 3.5vh;        */
+    font-size: 2rem;
 }
 
 ul{
